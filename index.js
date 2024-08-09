@@ -1,67 +1,135 @@
+// const express = require('express');
+
 // const path = require('path');
 
-// const DataA = path.dirname("C:/FolderA/FolderB/FileA.html");
-// const DataB = path.basename("C:/FolderA/Folder/FileA.html");
-// const Datac = path.extname("C:/FolderA/Folder/FileA.html");
-// const DataD = path.parse("C:/FolderA/Folder/FileA.html");
-// const DataE = path.isAbsolute("C:/FolderA/Folder/FileA.html");
-// const changeFormat = {
+// const bodyParser = require('body-parser');
 
-// }
-// path.format(changeFormat);
+// const app = express();
 
-// path.join('','');
+// app.use(bodyParser.urlencoded({extended: false}));
 
-// path.normalize('');
+// const array = [
+//     {
+//       "id": "1",
+//       "name": "Justine_Funk",
+//       "cost": "687.00"
+//     },
+//     {
+//       "id": "2",
+//       "name": "Charlotte_Leffler97",
+//       "cost": "386.00"
+//     },
+//     {
+//       "id": "3",
+//       "name": "Rosemary_Ullrich",
+//       "cost": "584.00"
+//     },
+//     {
+//       "id": "4",
+//       "name": "Alana_Schulist",
+//       "cost": "139.00"
+//     },
+//     {
+//       "id": "5",
+//       "name": "Rickie_Kihn75",
+//       "cost": "582.00"
+//     },
+//     {
+//       "id": "6",
+//       "name": "Raoul_Johns45",
+//       "cost": "888.00"
+//     },
+//     {
+//       "id": "7",
+//       "name": "Eulalia.Franecki0",
+//       "cost": "388.00"
+//     },
+//     {
+//       "id": "8",
+//       "name": "Amber77",
+//       "cost": "144.00"
+//     },
+//     {
+//       "id": "9",
+//       "name": "Mario97",
+//       "cost": "910.00"
+//     },
+//     {
+//       "id": "10",
+//       "name": "Horace52",
+//       "cost": "65.00"
+//     },
+//   ];
 
-// path.relative('', '');
 
-// path.resolve('');
-
-// console.log(DataA);
-
-// console.log(DataB);
-
-// console.log(Datac);
-
-// console.log(DataE);
-
-// console.log(DataD);
-
-// const fs = require('fs');
-
-// fs.writeFileSync('MyFileA.txt', 'This is my file');
-
-// const ReadData = fs.readFileSync('MyFileA.txt', 'utf-8');
-
-// fs.appendFileSync('NewFile.txt', 'Appended Text');
-
-// console.log(ReadData);
-
-// fs.renameSync('MyFileA.txt', 'NewFile.txt'); 
-
-// fs.unlinkSync('NewFile.txt');
-
-// fs.writeFile('AsyncFile.txt', 'New file created', (e)=>{
-//     if(e){
-//         console.log(e);
-//     }else{
-//         console.log("File Created Successfily");
-//     }
+//   app.get('/home/:id', (req, res)=>{
+//     res.send(array.find((e)=>{
+//         if(e.id == req.params.id){
+//             return e;
+//         }
+//     }));
 // });
 
-// fs.readFile('AsyncFile.txt', 'utf-8', (e, ReadData)=>{
-//     if(e){
-//         console.log(e);
-//     }
-//     else{
-//         console.log(ReadData);
-//     }
+// app.post('/add', (req, res)=>{
+//   const { id, name, cost } = req.body;
+
+//   const result = {
+//     "id": id,
+//     "name": name,
+//     "cost": cost
+//   }
+
+//   array.push(result);
+
+//   res.json(array);
 // });
 
-// fs.rename('', '');
+// app.delete('/home/:id' ,(req, res)=>{
+//   const ID = req.params.id;
+//   const result = array.find(result => result.id = ID);
+//   if(result){
+//     newArray = array.filter(result => result.id != ID);
+//     res.json(newArray);
+//   }
+// });
 
-// fs.appendFile('');
+// app.put('/home/:id', (req, res)=>{
+//   const { id }= req.params;
+//   const { name, cost } = req.body;
 
-// fs.unlink('')
-    
+//   const result = array.find(e => e.id = id);
+
+//   if(result){
+//     result.name = name;
+//     result.cost = cost;
+//     res.json(array);
+//   }else{
+//     res.send("Unable to update");
+//   }
+// });
+// app.get('/home', (req, res)=>{
+//     res.sendFile(path.join(__dirname, 'Home.txt'));
+// });
+
+// app.get('/username/:name', (req, res)=>{
+//   const name = req.params.name;
+//   res.send(name);
+// });
+
+// app.get('/home', (req, res, next)=>{
+
+//   let numA = 10;
+
+//   if(numA == 10){
+//     next();
+//   }
+//   console.log("Inside function A");
+// });
+
+// app.get('/home', (req, res)=>{
+//   console.log("Inside function B");
+// });
+
+// app.listen(7000, ()=>{
+//     console.log("Server started");
+// });
