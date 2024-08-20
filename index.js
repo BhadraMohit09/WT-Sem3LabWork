@@ -43,7 +43,7 @@ mongoose.connect(connectionString).then(()=>{
     });
 
     //DELETE
-    app.delete('/home/delete/:id', (req, res)=>{
+    app.delete('/home/delete/:id', async(req, res)=>{
         const result = await faculty.deleteOne({id: req.params.id});
         res.json(result);
     }
