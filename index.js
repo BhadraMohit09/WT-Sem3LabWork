@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const faculty = require('./Model/Faculty');
 
-const connectionString = 'mongodb+srv://23010101605:mohit123@cluster0.pbnz1h4.mongodb.net/Faculty?retryWrites=true&w=majority&appName=Cluster0';
+const connectionString = '';
 
 mongoose.connect(connectionString).then(()=>{
 
