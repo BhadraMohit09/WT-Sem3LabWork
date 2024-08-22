@@ -38,7 +38,7 @@ mongoose.connect(connectionString).then(()=>{
 
     //UPDATE
     app.patch('/update/:id', async(req, res)=>{
-        const result = await faculty.findOneAndUpdate({id: req.params.id}, req.body);
+        const result = await faculty.findOneAndUpdate({id: req.params.id}, req.body, {new: true});
         res.json(result); 
     });
 
