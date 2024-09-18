@@ -15,7 +15,7 @@ const Navbar = () => {
                                 <Link to='/home' class="nav-link active" aria-current="page">GetAll</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to='/contact'>Contact</Link>
+                                <Link to='/contact' class="nav-link">Contact</Link>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link">Pricing</Link>
