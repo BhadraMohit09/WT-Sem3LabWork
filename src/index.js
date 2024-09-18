@@ -4,7 +4,6 @@ import './index.css';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Layout from './Components/Layout';
-import GetByID from './Components/GetByID';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
   
@@ -15,7 +14,6 @@ root.render(
       <Route path='/' element={<Layout />}>
         <Route path='/home' element={<About />}/>
         <Route path='/contact' element={<Contact />} />
-        <Route path='home/:id' element={<GetByID />} />
       </Route>
     </Routes>
   </BrowserRouter>
