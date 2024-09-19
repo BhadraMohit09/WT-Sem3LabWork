@@ -12,7 +12,7 @@ const Navbar = () => {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <Link to='/home' class="nav-link active" aria-current="page">GetAll</Link>
+                                <Link to='/home' class="nav-link" aria-current="page">GetAll</Link>
                             </li>
                             <li class="nav-item">
                                 <Link to='/contact' class="nav-link">Contact</Link>
