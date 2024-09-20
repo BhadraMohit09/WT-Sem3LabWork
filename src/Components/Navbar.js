@@ -21,7 +21,7 @@ const Navbar = () => {
                                 <Link class="nav-link">Pricing</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link disabled" aria-disabled="true">Disabled</Link>
+                                <Link class="nav-link">Disabled</Link>
                             </li>
                         </ul>
                     </div>
