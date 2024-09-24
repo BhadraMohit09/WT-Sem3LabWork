@@ -1,0 +1,44 @@
+<!-- Write an HTML ƒle with JavaScript that ƒnds position of ƒrst occurrence of vowel “a”, last
+occurrence of vowel “a” in a given word and returns the string between them. For example,
+ajanta- then script would return ƒrst occurrence of “a”-that is position 1 and last
+occurrence-6 and string between them is “jant”. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find String Between First and Last Occurrence of 'a'</title>
+</head>
+<body>
+
+<h2>Find String Between First and Last Occurrence of 'a'</h2>
+
+<div id="result"></div>
+
+<script>
+    function processInput(inputWord) {
+        var resultDiv = document.getElementById("result");
+
+        var firstIndex = inputWord.indexOf('a');
+        var lastIndex = inputWord.lastIndexOf('a');
+
+        if (firstIndex === -1 || lastIndex === -1 || firstIndex === lastIndex) {
+            resultDiv.innerHTML = "The word does not contain multiple occurrences of the vowel 'a'.";
+            return;
+        }
+
+        var stringBetween = inputWord.substring(firstIndex + 1, lastIndex);
+        resultDiv.innerHTML = "First occurrence of 'a' is at position: " + (firstIndex + 1) + "<br>" +
+                                "Last occurrence of 'a' is at position: " + (lastIndex + 1) + "<br>" +
+                                "String between first and last occurrence of 'a': " + stringBetween;
+    }
+
+    var inputWord = prompt("Enter a word:");
+    if (inputWord !== null && inputWord !== "") {
+        processInput(inputWord.toLowerCase());
+    }
+</script>
+
+</body>
+</html>

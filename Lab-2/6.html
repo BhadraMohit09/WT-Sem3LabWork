@@ -1,0 +1,68 @@
+<!-- Write an HTML page with JavaScript that takes a number from popup box in the range 0-
+999 and display it in words. If the number is out of range, it should show “out of range” and
+if it is not a number ,it should show “not a number” message in the result box. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number to Words Converter</title>
+</head>
+<body>
+
+<h2>Number to Words Converter</h2>
+<button onclick="convertToWords()">Convert Number</button><br><br>
+<div id="result"></div>
+
+<script>
+    function convertToWords() {
+        var numberInput = prompt("Enter a number (0-999):");
+
+        if (numberInput === null || numberInput === "") {
+            return;
+        }
+
+        var resultDiv = document.getElementById("result");
+
+        if (isNaN(numberInput)) {
+            resultDiv.textContent = "Not a number";
+            return;
+        }
+
+        var number = parseInt(numberInput);
+
+        if (number < 0 || number > 999) {
+            resultDiv.textContent = "Out of range";
+            return;
+        }
+
+        var units = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+        var teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+        var tens = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+        var result = '';
+
+        if (number >= 100) {
+            result += units[Math.floor(number / 100)] + ' Hundred ';
+            number %= 100;
+        }
+
+        if (number >= 20) {
+            result += tens[Math.floor(number / 10) - 2] + ' ';
+            number %= 10;
+        } else if (number >= 10) {
+            result += teens[number - 10] + ' ';
+            number = 0;
+        }
+
+        if (number > 0) {
+            result += units[number] + ' ';
+        }
+
+        resultDiv.textContent = result.trim();
+    }
+</script>
+
+</body>
+</html>

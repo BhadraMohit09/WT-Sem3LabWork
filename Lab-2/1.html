@@ -1,0 +1,39 @@
+<!-- WAP in JavaScript to print the factors of given number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factors</title>
+</head>
+<body>
+
+    <!-- -----------1 and number itseld is already factor-------------- -->
+
+    <!-- <script>
+        const number = Number.parseInt(prompt("Enter Number = "));
+        document.write(1+" ");
+        for (let i = 2; i < number; i++) {
+            if(number%i==0){
+                document.write(i+" ");
+            }
+        }
+        document.write(number);
+    </script> -->
+
+    <!-- -------------------OR------------------- -->
+    
+    <script>
+        const number = Number.parseInt(prompt("Enter Number = "));
+        // document.write(1+" ");
+        for (let i = 1; i <= number; i++) {
+            if(number%i==0){
+                document.write(i+" ");
+            }
+        }
+        // document.write(number);
+    </script>
+
+</body>
+</html>
