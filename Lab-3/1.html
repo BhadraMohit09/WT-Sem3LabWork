@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find maximum</title>
+</head>
+<body>
+    <script>
+        let data = [31,34,56,23,8,0,90];
+        let max = data[0];
+
+        for(let i = 1; i < data.length; i++){
+            if(data[i] > max){
+                max = data[i];
+            }
+        }
+
+        document.write("Maximum of " + data + " is ==> " + max);
+
+    </script>
+</body>
+</html>

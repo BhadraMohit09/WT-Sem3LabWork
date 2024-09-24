@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Functions</title>
+  
+  <style>
+    .btn-div{
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn-div button{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  </style>
+
+</head>
+<body>
+  <script>
+    let a = [];
+    
+    function push() {
+      a.push(parseInt(prompt("n:")));
+      console.log(a);
+    }
+    
+    const pop = () => {
+      a.pop();
+      console.log(a);
+    }
+
+    const shift = () => {
+      a.shift();
+      console.log(a);
+    }
+    
+    const unshift = () => {
+      x = parseInt(prompt("x:"));
+      a.unshift(x);
+      console.log(a);
+    }
+    
+    const splice = () => {
+      x = parseInt(prompt("index : "));
+      y = parseInt(prompt("Enter Count (howmany numbers you remove) : "));
+      z = parseInt(prompt("Enter Number :"));
+      a.splice(x,y,z);
+      console.log(a);
+    }
+    
+    const sort = () => {
+      a.sort();
+      console.log(a);
+    }
+    </script>
+
+    <div class="btn-div">
+      <button onclick="push()">Push</button>
+      <button onclick="pop()">Pop</button>
+      <button onclick="shift()">shift</button>
+      <button onclick="unshift()">unshift</button>
+      <button onclick="splice()">splice</button>
+      <button onclick="sort()">sort</button>
+    </div>
+
+</body>
+</html>

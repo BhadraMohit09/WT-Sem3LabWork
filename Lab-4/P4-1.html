@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Faculties In Array</title>
+</head>
+<body>
+  <script>
+    let a = [
+              {
+                "Name" : "Arjun Bala",
+                "Exp" : 10 + " Years",
+              },
+              {
+                "Name" : "Dharmik Sir",
+                "Exp" : 7 + " Years",
+              },
+              {
+                "Name" : "Vijay Sir",
+                "Exp" : 8 + " Years",
+              },
+              {
+                "Name" : "Vasim Sir",
+                "Exp" : 9 + " Years",
+              },
+            ];
+            console.log(a);
+  </script>
+
+  <div>
+    <div>
+      <script>
+        for(fac of a){
+          document.write('<h3>'+ fac.Name +'</h3>');
+          document.write('<h5>'+ fac.Exp +'</h5>');
+        }
+      </script>
+    </div>
+  </div>
+</body>
+</html>

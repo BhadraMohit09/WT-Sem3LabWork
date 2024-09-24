@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        #changeColor{
+            width: 15vh;
+            color: red;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeColor">Click Me</button>
+    <p id="changeText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia pariatur exercitationem accusantium at maiores recusandae nemo laudantium nulla, optio aspernatur ex unde officiis delectus, mollitia voluptas beatae quia! Earum, alias?</p>
+    <script>
+        let colors = ["red","green","blue","orange","black","maroon","pink","purple"];
+        let index = 0;
+
+        document.getElementById('changeColor').addEventListener('click', ()=>{
+            document.body.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
+        }); 
+
+        document.getElementById('changeColor').addEventListener('click', ()=>{
+            let textData = document.getElementById('changeText');
+            textData.style.color = colors[index];
+            index = (index + 1) % colors.length;
+        });
+
+    </script>
+</body>
+</html>

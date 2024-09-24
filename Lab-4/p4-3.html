@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students</title>
+</head>
+<body>
+  
+  <script>
+    let stu=[
+      {
+        "Name" : "A",
+        "Roll_NO" : 1,
+        "sem" : 5,
+      },
+
+      {
+        "Name" : "B",
+        "Roll_NO" : 2,
+        "sem" : 5,
+      },
+
+      {
+        "Name" : "C",
+        "Roll_NO" : 3,
+        "sem" : 5,
+      },
+
+      {
+        "Name" : "D",
+        "Roll_NO" : 4,
+        "sem" : 5,
+      },
+
+    ];
+    </script>
+
+    <table border="1">
+    <tr>
+    <script>
+      for(s of stu){
+        document.write('<td>')
+        document.write('<h2>Student Name : '+ s.Name +'</h2>');
+        document.write('<h3>Roll No:'+ s.Roll_NO +'</h3>');
+        document.write('<h4>sem:'+ s.sem +'</h4>');
+        document.write('</td>')
+      }
+    </script>
+    </tr>
+    </table>  
+
+</body>
+</html>
