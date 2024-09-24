@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Word in Sentence</title>
+</head>
+<body>
+    <script>
+        let sentence = ["QWERTY","ASDF","BCNOF","QWERTZ","XYZ"];
+        let word = prompt("Enter the word to search for:");
+
+        let index = -1;
+        for (let i = 0; i < sentence.length; i++) {
+            if (sentence[i] === word) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index !== -1) {
+            document.write("The word '" + word + "' is found at index ==> " + index);
+        } else {
+            document.write("The word '" + word + "' is not found in the sentence.");
+        }
+    </script>
+</body>
+</html>

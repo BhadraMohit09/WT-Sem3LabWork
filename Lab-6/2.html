@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<body>
+    <p id="toChange">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio amet eveniet voluptatem itaque doloremque, accusamus atque temporibus tempore neque ipsa maiores voluptatum sint ea impedit sed reprehenderit qui ratione quasi!</p>
+    <button onclick="ChangeColor()">Click Here</button>
+
+    <p id="onHover" onmouseover="HoverMethod()">Some Text to effect on Hover</p>
+
+    <p id="onEnter" onmouseenter="EnterMethod()" onmouseleave="LeaveMethod()">Some Text to effect on Hover</p>
+    <script>
+        function ChangeColor(){
+            document.getElementById('toChange').style.color = "green";
+        }
+
+        function HoverMethod(){
+            document.getElementById('onHover').style.fontSize = 20 + "px";
+        }
+
+        function EnterMethod(){
+            document.getElementById('onEnter').style.fontSize = 60 + "px";
+        }
+
+        function LeaveMethod(){
+            document.getElementById('onEnter').style.fontSize = 20 + "px";
+        }
+    </script>
+</body>
+</html>

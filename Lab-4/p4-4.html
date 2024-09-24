@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <style>
+    .tbl td{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let product = [
+      {
+        "Name" : "HP Victus",
+        "Price" : 65000,
+      },
+      {
+        "Name" : "Asus Turf",
+        "Price" : 60000,
+      },
+      {
+        "Name" : "Mouse(with wire)",
+        "Price" : 200,
+      },
+      {
+        "Name" : "Mouse(wireless)",
+        "Price" : 1000,
+      }
+    ];
+  </script>
+
+  <Table border="2" class="tbl" align="center">
+    <tr>
+      <script>
+        for(p of product){
+          document.write('<td>');
+          document.write('<h3> Product Name:'+ p.Name +'</h3>');
+          document.write('<h4> Price :'+ p.Price +'</h4>');
+          document.write('</td>');
+        }
+      </script>
+    </tr>
+  </Table>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>HTML Login Page</title>
+</head>
+<style>
+    /*style.css*/
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background: rgb(239, 232, 232);
+    flex-direction: column;
+    margin: 0;
+}
+
+.main {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: green;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: gray;
+    font-weight: bold;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    background-color: green;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+</style>
+<body>
+      <div class="main">
+            <h1>Login Page</h1>
+            <form id="form"> 
+                  <label for="name">
+                        Username:
+                  </label>
+                  <input type="text" 
+                         id="name" 
+                         name="name" 
+                         placeholder="Enter your Username" required>
+
+                  <label for="password">
+                        Password:
+                  </label>
+                  <input type="password"
+                         id="password" 
+                         name="password"
+                         placeholder="Enter your Password" required>
+                    <label for="password1">
+                           Repeat Password:
+                      </label>
+                    <input type="password"
+                             id="password1" 
+                             name="password1"
+                             placeholder="Repeat Password" required>
+                    <div class="wrap">
+                        <div>
+                        <label for="age">
+                            Date of Birth:
+                       </label>
+                        <input type="date" id='dob'>
+                          </div>
+                        <div>
+                            <label for="enroll">
+                                Enrollment:
+                           </label>
+                            <input type="number"
+                                  id="enroll" 
+                                  name="enroll"
+                                  placeholder="Enter Enrollment" required>
+                              </div>
+                        </div>
+                        <label for="email">
+                            Email:
+                       </label>
+                     <input type="email"
+                              id="email" 
+                              name="email"
+                              placeholder="Enter Email" required>
+                  <div class="wrap">
+                        <button type="submit"
+                                >
+                              Submit
+                        </button>
+                  </div>
+            </form>
+            <p>Not registered?
+                  <a href="#"
+                     style="text-decoration: none;">
+                        Create an account
+                  </a>
+            </p>
+      </div>
+      <!-- js -->
+      <script>
+        const form = document.getElementById("form");
+        form.addEventListener('submit', (event)=>{
+            event.preventDefault();
+            validate();
+        });
+        function calcAge() {
+        let DOB = document.getElementById('dob').value
+        DOB = new Date(DOB)
+    
+        let today = new Date()
+    
+        let age = today.getFullYear() - DOB.getFullYear()
+        let monthDiff = today.getMonth() - DOB.getMonth();
+
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < DOB.getDate())) {
+            age--;
+        }
+  
+        console.log(age)
+        return age;
+    }
+            function validate(){
+                let user = document.getElementById("name");
+                let pass = document.getElementById("password").value;
+                let pass1 = document.getElementById("password1").value;
+                let email = document.getElementById("email").value;
+                let eno = document.getElementById("enroll").value;
+                let age  = calcAge();
+                let pattern = /[!@#$%*^]{1,}[0-9]{1,}/;
+                let pattern1 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                let regex = new RegExp(pattern);
+                let regex1 = new RegExp(pattern1);
+                if(user.value.trim()<8){
+                    alert("username must contain at least 8 characters");  
+                }
+                else if(pass.length>12 || pass.length<8){
+                    alert("pass must be between 8 to 12 characters");
+                }
+                else if(!regex.test(pass)){
+                    alert("pass must contain at least 1 special characters");
+                }
+                else if(pass!=pass1){
+                    alert("password and confirm password must be same");
+                }
+                else if(age<=18){
+                    alert("age must be greater than 18 years.");
+                }
+                else if(eno.length!=11){
+                    alert("enter 11 digit enrollment no.");
+                }
+                else if(!regex1.test(email)){
+                    alert("enter valid email");
+                }
+                else{
+                    alert("form submited successfully..");
+                }
+            }
+      </script>
+</body>
+</html>
