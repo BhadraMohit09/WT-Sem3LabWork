@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Prime</title>
+</head>
+<body>
+    <script>
+        var number = Number.parseInt(prompt("Enter the number:: "));
+
+        var isPrime = true;
+        
+        if(number<=1) isPrime = false;
+
+        for(var i = 2; i <= Math.sqrt(number); i++){
+            if(number%i===0){
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime){
+            alert(number + " is a Prime number...");
+        }
+        else{
+            alert(number + " is not a Prime number...");
+        }
+    </script>
+</body>
+</html>

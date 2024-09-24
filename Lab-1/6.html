@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+
+<body>
+    <script>
+        var number = parseInt(prompt("Enter a number to check if it's an Armstrong number:"));
+        var sum = 0;
+        var temp = number;
+        var numDigits = number.toString().length;
+        
+        while (temp > 0) {
+            var digit = temp % 10;
+            sum += Math.pow(digit, numDigits);
+            temp = Math.floor(temp / 10);
+        
+        }
+    
+        alert(number + " is " + (sum === number ? "an Armstrong number." : "not an Armstrong number."));
+    
+    </script>
+</body>
+
+</html>

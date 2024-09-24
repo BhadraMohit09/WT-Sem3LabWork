@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        var num1 = Number.parseInt(prompt("Enter first number:: "));
+        var num2 = Number.parseInt(prompt("Enter second number:: "));
+
+        var operation = prompt("Enter operation => + - / *");
+
+        var result = 0;
+        switch(operation){
+            case "+":
+                result = num1 + num2
+                break;
+            case "-":
+                result = num1 - num2
+                break;
+            case "*":
+                result = num1 * num2
+                break;
+            case "/":
+                if(num2==0){
+                    print("Number cannot be divided by 0");
+                }
+                else{
+                    result = num1/num2;
+                }
+                break;
+            default:
+                alert("Invalid inputs...");
+                break;
+        }
+
+        alert("Result is ==> " + result);
+    </script>
+</body>
+</html>

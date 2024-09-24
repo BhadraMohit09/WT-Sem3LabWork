@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <script>
+        var number = Number.parseInt(prompt("Enter a number:: "));
+        var Factorial = 1;
+
+        if(number<0){
+            alert("Number cannot be negative...");
+        }
+        else{
+            for(var j = 1; j<= number; j++){
+                Factorial *= j;
+            }
+            alert("Factorial of " + number + " is " + Factorial);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+
+<body>
+    <script>
+        var number = parseInt(prompt("Enter the number of terms for the Fibonacci series:: "));
+        var series = [];
+
+        if (number <= 0) {
+            alert("Please enter a positive integer....");
+        } else {
+            if (number >= 1) series.push(0);
+            if (number >= 2) series.push(1);
+
+            for (var i = 2; i < number; i++) {
+                series.push(series[i - 1] + series[i - 2]);
+            }
+
+            alert("The Fibonacci series up to " + number + " terms is: " + series.join(", "));
+        }
+    </script>
+</body>
+
+</html>
