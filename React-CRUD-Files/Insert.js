@@ -53,5 +53,4 @@
 // }
 
 // export default Insert;
-
-// export default Insert;
+Make sure you have express.json() in your API.
