@@ -37,7 +37,7 @@
 //                 <button
 //                 className="btn btn-info m-1"
 //                 onClick={()=>{
-//                     fetch('http://localhost:7000/home/add', {
+//                     fetch('http://localhost:7000/home/add/', {
 //                         method: 'POST',
 //                         headers: {
 //                             "Content-Type":"application/json"
